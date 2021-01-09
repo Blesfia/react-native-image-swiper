@@ -21,9 +21,8 @@
   "author": "David (Blesfia)",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "emitVersion": "cp ./package.json ./build && cd ./build && npm publish",
-    "patch": "npm run build && npm version patch && npm run emitVersion"
+    "build": "tsc && cp ./package.json ./build && cp ./README.md ./build && cd ./build",
+    "patch": "npm version patch && npm run build && npm run publish"
   },
   "devDependencies": {
     "@types/react": "^16.9.22",

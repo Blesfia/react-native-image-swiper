@@ -13,14 +13,26 @@ const ScreenWidth = Dimensions.get("window").width;
 
 type Event = (data: { currentPage: number; uri: string }) => void;
 interface IProps {
+  /** List of unique uri images.
+   * @default []
+  */
   images?: string[];
+  /** Called when user swipe to a different page */
   onPageSelected?: Event;
+  /** Initial page to show
+   * @default 1
+   */
   initialPage?: number;
-  scrollViewProps?: React.Component<ScrollViewProps>;
-  imageProps?: React.Component<ImageProps>;
+  scrollViewProps?: ScrollViewProps;
+  imageProps?: ImageProps;
+  /** Called when user swipe down */
   onSwipeTop?: Event;
+  /** Called when user swipe up */
   onSwipeBottom?: Event;
-  ImageComponent: any;
+  /** Replace Image component to use
+   * @default Image
+   */
+  ImageComponent?: any;
 }
 
 export const ImageSwiper = ({

@@ -24,7 +24,7 @@ interface IProps {
    */
   initialPage?: number;
   scrollViewProps?: ScrollViewProps;
-  imageProps?: ImageProps;
+  imageProps?: Omit<ImageProps, 'source'>;
   /** Called when user swipe down */
   onSwipeTop?: Event;
   /** Called when user swipe up */

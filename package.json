@@ -22,7 +22,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && cp ./package.json ./build && cp ./README.md ./build && cd ./build",
-    "patch": "npm version patch && npm run build && npm run publish"
+    "patch": "npm version patch && npm run build && npm publish"
   },
   "devDependencies": {
     "@types/react": "^16.9.22",

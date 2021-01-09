@@ -33,7 +33,7 @@ import { ImageSwiper } from "@blesfia/react-native-image-swiper";
 
 ```jsx
 <ImageSwiper
-  imageProps={{ height: 700 }}
+  imageProps={{ style: { height: 800 } }}
   images={[
     "https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=958&q=80",
     "https://images.unsplash.com/photo-1555149385-c50f336e28b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",

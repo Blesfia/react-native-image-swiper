@@ -9,7 +9,7 @@ import {
   ImageProps,
 } from "react-native";
 
-const ScreenWidth = Dimensions.get("window").width;
+const { width, height } = Dimensions.get("window");
 
 type Event = (data: { currentPage: number; uri: string }) => void;
 interface IProps {
@@ -50,7 +50,7 @@ export const ImageSwiper = ({
 
   const scrollToInitialPosition = () => {
     scrollViewRef.current?.scrollTo({
-      x: ScreenWidth * (currentPage - 1),
+      x: width * (currentPage - 1),
     });
   };
 
@@ -101,6 +101,7 @@ export const ImageSwiper = ({
           >
             <ImageComponent
               source={{ uri }}
+              style={{ width, height }}
               {...(imageProps ?? {})}
             />
           </ScrollView>

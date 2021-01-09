@@ -2,6 +2,7 @@
   "name": "@blesfia/react-native-image-swiper",
   "version": "1.0.3",
   "description": "Fully customizable & extremely easy to use Image Swiper for React Native",
+  "private": false,
   "keywords": [
     "swiper",
     "image",
